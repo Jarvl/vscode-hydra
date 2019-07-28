@@ -6,6 +6,7 @@
 		"node": true
 	},
 	"parserOptions": {
+		"ecmaVersion": 2017,
 		"ecmaFeatures": {
 			"jsx": true
 		},
@@ -19,5 +20,9 @@
 		"no-unused-vars": "warn",
 		"constructor-super": "warn",
 		"valid-typeof": "warn"
+	},
+	"globals": {
+		"suite": true,
+		"test": true
 	}
 }
