@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.toggle"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.toggle",
+				"title": "Toggle vscode-hydra"
 			}
 		]
 	},
@@ -26,7 +26,8 @@
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile",
-		"test": "node ./out/test/runTest.js"
+		"test": "node ./out/test/runTest.js",
+		"declaration": "tsc --declaration"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
@@ -38,5 +39,12 @@
 		"typescript": "^3.3.1",
 		"tslint": "^5.12.1",
 		"vscode-test": "^1.0.2"
+	},
+	"dependencies": {
+		"@types/electron": "^1.6.10",
+		"@types/p5": "^0.7.3",
+		"dgram": "^1.0.1",
+		"hydra-synth": "^1.0.25",
+		"osc-min": "^1.1.1"
 	}
 }
