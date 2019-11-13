@@ -10,14 +10,34 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.toggle"
+		"onCommand:vscode-hydra.toggle",
+		"onCommand:vscode-hydra.evalBlock",
+		"onCommand:vscode-hydra.evalLine"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.toggle",
-				"title": "Toggle vscode-hydra"
+				"command": "vscode-hydra.toggle",
+				"title": "VSCode Hydra: Toggle"
+			},
+			{
+				"command": "vscode-hydra.evalBlock",
+				"title": "VSCode Hydra: Evaluate Block"
+			},
+			{
+				"command": "vscode-hydra.evalLine",
+				"title": "VSCode Hydra: Evaluate Line"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "vscode-hydra.evalBlock",
+				"key": "ctrl+shift+enter"
+			},
+			{
+				"command": "vscode-hydra.evalLine",
+				"key": "ctrl+enter"
 			}
 		]
 	},

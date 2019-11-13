@@ -1,4 +1,5 @@
 import * as p5lib from 'p5'
+import 'p5/lib/addons/p5.dom'
 
 interface Canvas extends Element {
   style: {
